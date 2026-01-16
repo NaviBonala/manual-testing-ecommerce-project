@@ -1,1 +1,23 @@
+## Login
+| Test Case ID | Test Scenario ID | Test Case Description | Preconditions | Test Steps | Test Data | Expected Result |
+| TC_01 | TS_01 | Verify login with valid credentials | User is on the SauceDemo login page and has a registered user account | 1. Enter valid username<br>2. Enter valid password<br>3. Click Login | Username: standard_user<br>Password: secret_sauce | User is logged in and redirected to products page |
+| TC_02 | TS_02 | Verify login fails with invalid username | User is on the SauceDemo login page and has a registered user account | 1. Enter invalid username<br>2. Enter valid password<br>3. Click Login | Username: abcde<br>Password: secret_sauce | Error message should display on invalid credentials |
+| TC_03 | TS_03 | Verify login fails with invalid upassword | User is on the SauceDemo login page and has a registered user account | 1. Enter valid username<br>2. Enter invalid password<br>3. Click Login | Username: standard_user<br>Password: sauce | Error message should display on invalid credentials |
+| TC_04 | TS_04 | Verify login with empty fields | User is on the SauceDemo login page and has a registered user account | 1. Enter valid username<br>2. Enter valid password<br>3. Click Login | Username: _blank_<br>Password: _blank_ | Error message should be displayed when logged in with empty fields |
+| TC_05 | TS_05 | Verify error message is displayed for locked-out user | User is on the SauceDemo login page and has a registered user account | 1. Enter locked out username<br>2. Enter the valid password<br>3. Click Login | Username: locked_out_user<br>Password: secret_sauce | Error message should be displayed for the locked-out user |
 
+## Cart
+**| Test Case ID | Test Scenario ID | Test Case Description | Preconditions | Test Steps | Expected Result |** 
+| TC_06 | TS_11 | Verify adding single product to cart | User is logged into the application and is on the products page. | 1. Click the "Add to cart" button<br>2. Navigate to the shopping cart page | The correct product is added to the cart, the cart icon updates to (1), and the product details are accurate |
+| TC_07 | TS_12 | Verify adding multiple items to cart | User is logged into the application and is on the products page. | 1. Click the "add to cart" button on the product A.<br>2. Navigate to product B<br>3. Add the product B to the cart<br>4. go to the cart page | Both products appear as separate line items |
+| TC_08 | TS_13 | Verify removing the product from cart | User is logged into the application and is on the products page | 1. Click the "add to cart" button on the product.<br>2. Navigate to cart page<br>3. Click "remove" button of the product. |  Products removed from the cart |
+| TC_09 | TS_14 | Verify cart badge updates correctly | User is logged into the application and is on the products page | 1. Click the "add to cart" button on the product. | Badge updated correctly based on adding product | 
+| TC_10 | TS_15 | Verify cart retains items after page refresh | User logged into the application and is on the products page | 1. Click the "add to cart" button on the product.<br>2. Refresh the page | Cart remains same after page refresh |
+
+## Checkout 
+**| Test Case ID | Test Scenario ID | Test Case Description | Preconditions | Test Steps | Expected Result |** 
+| TC_11 | TS_16 | Verify can be proceed to checkout from cart | User is logged into application and added the products to cart and is on the cart page | 1. Click on the "checkout" button. | Able to checkout |
+| TC_12 | TS_17 | Verify checkout fails when mandatory fields are empty | User is logged into application and added the products to cart and is on the cart page | 1. Click on the "checkout" button.<br>2. Leave the mandatory fields blank.<br>3. Click "continue" | Error message should be displayed for the mandatory fields |
+| TC_13 | TS_19 | Verify checkout fails for invalid postal code | User is logged into application and added the products to cart and is on the cart page | 1. Click on the "checkout" button.<br>2. Give the invalid postal code.<br>3. Click "continue" | Error message should be displayed for the invalid postal code | 
+| TC_14 | TS_18 | Verify successful checkout with valid user details | User is logged into application and added the products to cart and is on the cart page | 1. Click on the "checkout" button.<br>2. Give the mandatory fields.<br>3. Click "continue" | Successfully checked out | 
+| TC_15 | TS_21 | Verify order confirmation after successful checkout |User is logged into application and added the products to cart and is on the cart page |  1. Click on the "checkout" button.<br>2. Give the mandatory fields.<br>3. Click "continue" | Order has been placed after successful checkout |
