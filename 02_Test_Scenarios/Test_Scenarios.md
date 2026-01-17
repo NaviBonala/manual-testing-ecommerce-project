@@ -24,8 +24,9 @@ TS_16: Verify user can be proceed to checkout from cart
 TS_17: Verify checkout fails when mandatory fields are empty
 TS_18: Verify checkout succeeds with valid user details
 TS_19: Verify error message for invalid postal code
-TS_20: Verify order summary is displayed before completion
-TS_21: Verify order confirmation after successful checkout
+TS_20: Verify order confirmation after successful checkout
+TS_21: Verify order summary is displayed before completion
+
 
 ## Logout & Session Module
 TS_22: Verify user can logout successfully
